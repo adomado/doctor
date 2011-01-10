@@ -39,7 +39,11 @@
             this.message_lbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Reg_lbl = new System.Windows.Forms.Label();
+            this.pop1 = new System.Windows.Forms.PictureBox();
+            this.pop2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pop1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pop2)).BeginInit();
             this.SuspendLayout();
             // 
             // uninstallerTest_btn
@@ -59,9 +63,10 @@
             this.err_list.BackColor = System.Drawing.Color.Snow;
             this.err_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.err_list.FormattingEnabled = true;
+            this.err_list.HorizontalScrollbar = true;
             this.err_list.Location = new System.Drawing.Point(3, 121);
             this.err_list.Name = "err_list";
-            this.err_list.Size = new System.Drawing.Size(281, 364);
+            this.err_list.Size = new System.Drawing.Size(204, 364);
             this.err_list.TabIndex = 3;
             this.err_list.Visible = false;
             // 
@@ -70,7 +75,7 @@
             this.Registry_Values_lbl.AutoSize = true;
             this.Registry_Values_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registry_Values_lbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Registry_Values_lbl.Location = new System.Drawing.Point(342, 121);
+            this.Registry_Values_lbl.Location = new System.Drawing.Point(319, 121);
             this.Registry_Values_lbl.Name = "Registry_Values_lbl";
             this.Registry_Values_lbl.Size = new System.Drawing.Size(83, 13);
             this.Registry_Values_lbl.TabIndex = 5;
@@ -93,11 +98,11 @@
             this.list_head_lbl.AutoSize = true;
             this.list_head_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.list_head_lbl.ForeColor = System.Drawing.Color.DarkRed;
-            this.list_head_lbl.Location = new System.Drawing.Point(0, 78);
+            this.list_head_lbl.Location = new System.Drawing.Point(25, 78);
             this.list_head_lbl.Name = "list_head_lbl";
-            this.list_head_lbl.Size = new System.Drawing.Size(125, 25);
+            this.list_head_lbl.Size = new System.Drawing.Size(147, 25);
             this.list_head_lbl.TabIndex = 8;
-            this.list_head_lbl.Text = "Missing Files";
+            this.list_head_lbl.Text = "Untracked Files";
             this.list_head_lbl.Visible = false;
             // 
             // messages
@@ -105,9 +110,10 @@
             this.messages.BackColor = System.Drawing.Color.Snow;
             this.messages.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.messages.FormattingEnabled = true;
-            this.messages.Location = new System.Drawing.Point(784, 121);
+            this.messages.HorizontalScrollbar = true;
+            this.messages.Location = new System.Drawing.Point(736, 121);
             this.messages.Name = "messages";
-            this.messages.Size = new System.Drawing.Size(216, 208);
+            this.messages.Size = new System.Drawing.Size(276, 208);
             this.messages.TabIndex = 9;
             this.messages.Visible = false;
             // 
@@ -128,7 +134,7 @@
             this.message_lbl.AutoSize = true;
             this.message_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.message_lbl.ForeColor = System.Drawing.Color.DarkRed;
-            this.message_lbl.Location = new System.Drawing.Point(779, 78);
+            this.message_lbl.Location = new System.Drawing.Point(748, 78);
             this.message_lbl.Name = "message_lbl";
             this.message_lbl.Size = new System.Drawing.Size(103, 25);
             this.message_lbl.TabIndex = 10;
@@ -157,12 +163,32 @@
             this.Reg_lbl.Text = "Registry Values";
             this.Reg_lbl.Visible = false;
             // 
+            // pop1
+            // 
+            this.pop1.Location = new System.Drawing.Point(781, 335);
+            this.pop1.Name = "pop1";
+            this.pop1.Size = new System.Drawing.Size(70, 64);
+            this.pop1.TabIndex = 12;
+            this.pop1.TabStop = false;
+            this.pop1.Visible = false;
+            // 
+            // pop2
+            // 
+            this.pop2.Location = new System.Drawing.Point(782, 416);
+            this.pop2.Name = "pop2";
+            this.pop2.Size = new System.Drawing.Size(69, 64);
+            this.pop2.TabIndex = 13;
+            this.pop2.TabStop = false;
+            this.pop2.Visible = false;
+            // 
             // filechk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(1012, 488);
+            this.ClientSize = new System.Drawing.Size(1012, 521);
+            this.Controls.Add(this.pop2);
+            this.Controls.Add(this.pop1);
             this.Controls.Add(this.Reg_lbl);
             this.Controls.Add(this.message_lbl);
             this.Controls.Add(this.messages);
@@ -173,11 +199,14 @@
             this.Controls.Add(this.err_list);
             this.Controls.Add(this.uninstallerTest_btn);
             this.Controls.Add(this.installerTest_btn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "filechk";
             this.Text = "AdoMado Doctor";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pop1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pop2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,6 +224,8 @@
         private System.Windows.Forms.ListBox messages;
         private System.Windows.Forms.Label message_lbl;
         private System.Windows.Forms.Label Reg_lbl;
+        private System.Windows.Forms.PictureBox pop1;
+        private System.Windows.Forms.PictureBox pop2;
     }
 }
 
